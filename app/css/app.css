@@ -1,0 +1,42 @@
+ul.treeNode,ul.treeNode ul {
+	list-style-type: none;
+	background: url(img/vline.png) repeat-y;
+	margin: 0;
+	padding: 0;
+}
+
+ul.treeNode ul {
+	margin-left: 10px;
+}
+
+ul.treeNode li {
+	margin: 0;
+	padding: 0 12px;
+	line-height: 20px;
+	background: url(img/node.png) no-repeat;
+	color: #369;
+	font-weight: bold;
+}
+
+ul.treeNode li:last-child {
+	background: #fff url(img/lastnode.png) no-repeat;
+}
+
+input.form-control.ng-invalid {
+	background: #F55;
+}
+
+/* .nodedetail{
+   -webkit-transition: opacity .25s linear;
+   -moz-transition: opacity  .25s linear;
+   -o-transition: opacity .25s linear;
+   transition: opacity .25s linear;
+   opacity: 1;
+}
+
+.nodedetail.ng-hide-add, .nodedetail.ng-hide-remove{
+  display:block!important;
+}
+.nodedetail.ng-hide{
+  opacity: 0;
+} */

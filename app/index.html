@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="MainApp">
+<head>
+<meta charset="utf-8">
+<title>Match Tree Builder</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/app.css">
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</head>
+<body ng-controller="MainController" >
+	<div class="row">
+		<div class='col-sm-1'></div>
+		<div class='col-sm-5'>
+			<h2>Match Tree</h2>
+<!--  			<ul class='tree'> -->
+<!-- 				<li class='rootNode' ng-repeat="node in tree" ng-include="'partial/tree_node.html'"></li> -->
+<!-- 			</ul> -->
+	  		<boinq-tree-node></boinq-tree-node>	
+ 	</div>
+		<div class='col-sm-5'>
+			<h2>Detail</h2>
+			<div ng-include="mainData.activeNode | detailurl"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class='col-sm-1'></div>
+		<div class='col-sm-10'>
+			<h2>The tree</h2>
+			<pre>{{tree | json}}</pre>
+		</div>
+	</div>
+</body>
+</html>

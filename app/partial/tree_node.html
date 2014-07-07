@@ -1,0 +1,20 @@
+<div ng-controller="TreeController">
+<div class="nav-tabs-justified" ng-click="setActive(node)">
+	{{node | nodesummary}}
+	<div class='nodedetail' ng-show="isActive(node)"
+		ng-include="mainData.activeNode | detailurl"></div>
+</div>
+<button type="button" class="addButton btn btn-default btn-xs"
+	ng-click="setActive(add(node))" ng-show="canHaveChildren(node)">
+	<span class="glyphicon glyphicon-plus"></span>
+</button>
+<button type="button" class="deleteButton btn btn-default btn-xs"
+	ng-click="delete(node)" ng-show="node.nodes.length > 0">
+	<span class="glyphicon glyphicon-remove"></span>
+</button>
+<ul class="treeNode">
+	<li class="treeNode nav-tabs-justified" ng-repeat="node in node.nodes"
+		ng-include="'partial/tree_node.html'">
+		</li>
+</ul>
+</div>
